@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install mustache.js
-        run: npm install mustache
+      - name: Install mustache CLI globally
+        run: npm install -g mustache
 
       - name: Run build script
         run: bash build.sh
@@ -29,4 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
-
