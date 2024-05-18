@@ -1,0 +1,16 @@
+{
+  "name": "gracism",
+  "version": "1.0.0",
+  "description": "A website for Gracism",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gracism/gracism.com.git"
+  },
+  "keywords": [
+    "gracism"
+  ],
+  "bugs": {
+    "url": "https://github.com/gracism/gracism.com/issues"
+  },
+  "homepage": "https://github.com/gracism/gracism.com#readme"
+}
