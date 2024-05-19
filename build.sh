@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # Build gracism from templates
-cp -R -p images docs
-cp -R -p css docs
+mkdir -p ouput
+cp -R -p images output
+cp -R -p css output
 TEMPLATES='-p templates/google.mustache -p templates/t2.mustache -p templates/head.mustache -p templates/foot.mustache'
-mustache ${TEMPLATES} data/thoughts.json templates/thoughts.mustache > docs/thoughts.html
-mustache ${TEMPLATES} data/index.json templates/index.mustache > docs/index.html
-mustache ${TEMPLATES} data/music.json templates/music.mustache > docs/music.html
-mustache ${TEMPLATES} data/things.json templates/things.mustache > docs/things.html
+mustache ${TEMPLATES} data/thoughts.json templates/thoughts.mustache > output/thoughts.html
+mustache ${TEMPLATES} data/index.json templates/index.mustache > output/index.html
+mustache ${TEMPLATES} data/music.json templates/music.mustache > output/music.html
+mustache ${TEMPLATES} data/things.json templates/things.mustache > output/things.html
