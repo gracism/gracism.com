@@ -1,10 +1,7 @@
 name: Gracism Alt-Build
 run-name: ${{ github.actor }} is running alt-build for gracism
 on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
+  [push]
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
