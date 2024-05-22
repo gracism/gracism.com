@@ -26,8 +26,14 @@ jobs:
       - name: Install mustache CLI globally
         run: npm install -g mustache
 
+      - name: ls before
+        run: bash ls -al
+        
       - name: Run build script
         run: bash build.sh
+      
+      - name: ls after
+        run: bash ls -al 
         
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
