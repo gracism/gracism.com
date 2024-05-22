@@ -1,0 +1,82 @@
+body {
+  font-family: Tahoma, sans-serif;
+}
+
+
+#heading {
+    valign: center;
+    vertical-align:middle;
+    color: black;
+}
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+h2 {
+  color: #108010;
+}
+
+.header h1 {
+  float: right;
+  position: relative;
+  margin-right: 1em;
+  color: #108010
+}
+
+#logo {
+    float: left;
+    margin: 0em 1em 1em 0em;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.thought {
+  width: 95%;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: url('../images/greenbg-dk.jpg');
+  background-repeat: repeat;
+} 
+.box {
+  width: 45%;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: url('../images/greenbg-dk.jpg');
+  background-repeat: repeat;
+}
+
+.box h2 {
+  margin-top: 0;
+  margin-bottom: 0em;
+
+}
+
+.box p {
+  margin-bottom: 0.25em;
+    color: blue;
+}
+
+.footer {
+  border: 2px solid red;
+  width: 95%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: url('../images/greenbg-dk.jpg');
+  background-repeat: repeat;
+}
+}
