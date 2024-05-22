@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy Gracism.com
 
 on:
   push:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
 
       - name: Install mustache CLI globally
         run: npm install -g mustache
@@ -28,5 +28,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./docs
-          keep_files: false  # Ensure only the content of ./docs is deployed
+          publish_dir: ./output
+          keep_files: false  # Ensure only the content of ./output is deployed
