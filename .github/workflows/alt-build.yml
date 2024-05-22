@@ -46,6 +46,7 @@ jobs:
       
       - name: ls after
         run: ls -al 
+        run: ls -al output
         
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
