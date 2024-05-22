@@ -45,8 +45,9 @@ jobs:
         run: bash build.sh
       
       - name: ls after
-        run: ls -al 
-        run: ls -al output
+        run: |
+          ls -al 
+          ls -al output
         
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
