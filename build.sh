@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build gracism from templates
-mkdir -p ouput
+mkdir -p output
 cp -R -p images output
 cp -R -p css output
 TEMPLATES='-p templates/google.mustache -p templates/t2.mustache -p templates/head.mustache -p templates/foot.mustache'
