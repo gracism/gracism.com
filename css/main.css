@@ -1,82 +1,274 @@
+:root {
+  --sage-green: #9caf88;
+  --sage-light: #b8c9a4;
+  --sage-dark: #7a8a6b;
+  --warm-white: #fefcf7;
+  --soft-gray: #f5f5f3;
+  --charcoal: #2c3e2d;
+  --accent-teal: #5c9eaa;
+  --gold-accent: #d4af37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.6;
+  color: var(--charcoal);
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--soft-gray) 100%);
+  min-height: 100vh;
 }
 
-
-#heading {
-    valign: center;
-    vertical-align:middle;
-    color: black;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.header img {
-  float: left;
-  width: 100px;
-  height: 100px;
-  background: #555;
+header {
+  background: var(--sage-green);
+  padding: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-h2 {
-  color: #108010;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.header h1 {
-  float: right;
-  position: relative;
-  margin-right: 1em;
-  color: #108010
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 #logo {
-    float: left;
-    margin: 0em 1em 1em 0em;
+  width: 80px;
+  height: 64px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+h1 {
+  font-size: 2.5rem;
+  color: var(--warm-white);
+  font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
 
-.container {
+h1 sup {
+  font-size: 0.6rem;
+  color: var(--gold-accent);
+}
+
+nav ul {
   display: flex;
-  justify-content: space-around;
-  padding: 10px;
+  list-style: none;
+  gap: 2rem;
 }
 
-.thought {
-  width: 95%;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  background-image: url('../images/greenbg-dk.jpg');
-  background-repeat: repeat;
-} 
-.box {
-  width: 45%;
-  padding: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  background-image: url('../images/greenbg-dk.jpg');
-  background-repeat: repeat;
+nav a {
+  color: var(--warm-white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-.box h2 {
-  margin-top: 0;
-  margin-bottom: 0em;
-
+nav a:hover {
+  background: var(--warm-white);
+  color: var(--sage-green);
+  transform: translateY(-2px);
 }
 
-.box p {
-  margin-bottom: 0.25em;
-    color: blue;
+main {
+  padding: 3rem 0;
 }
 
-.footer {
-  border: 2px solid red;
-  width: 95%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  background-image: url('../images/greenbg-dk.jpg');
-  background-repeat: repeat;
+.thought-section {
+  background: var(--warm-white);
+  border-radius: 15px;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-left: 5px solid var(--accent-teal);
+  position: relative;
 }
+
+.thought-section::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--sage-light);
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-family: serif;
+}
+
+.thought-label {
+  font-size: 0.9rem;
+  color: var(--accent-teal);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.thought-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.content-card {
+  background: var(--warm-white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--sage-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sage-green), var(--accent-teal));
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.content-card h2 {
+  color: var(--sage-dark);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.content-card p {
+  color: var(--charcoal);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.thoughts-list {
+  background: var(--warm-white);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.thoughts-intro {
+  color: var(--charcoal);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.thought-item {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--soft-gray);
+  border-radius: 10px;
+  border-left: 4px solid var(--sage-green);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.thought-item:hover {
+  transform: translateX(10px);
+  background: var(--warm-white);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.thought-item:nth-child(even) {
+  border-left-color: var(--accent-teal);
+}
+
+footer {
+  background: var(--sage-dark);
+  color: var(--warm-white);
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  background: var(--charcoal);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+footer a {
+  color: var(--gold-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: var(--warm-white);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .thought-section,
+  .content-card,
+  .thoughts-list {
+    padding: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

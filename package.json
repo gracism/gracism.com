@@ -12,5 +12,12 @@
   "bugs": {
     "url": "https://github.com/gracism/gracism.com/issues"
   },
-  "homepage": "https://github.com/gracism/gracism.com#readme"
+  "homepage": "https://github.com/gracism/gracism.com#readme",
+  "dependencies": {
+    "mustache": "^4.2.0"
+  },
+  "scripts": {
+    "build": "./build.sh",
+    "build-modern": "cd modern && ./build.sh"
+  }
 }

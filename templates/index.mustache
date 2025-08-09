@@ -1,31 +1,24 @@
 {{> head}}
 
-  <div class="container">
-    <div class="thought">
-<div align="left"><a href="thoughts.html">Thought for the day</a>:
-{{thought}}
-</div>
+<section class="thought-section">
+    <div class="thought-label">
+        <a href="thoughts.html">Thought for the day</a>
     </div>
-  </div>
-  <div class="container">
-    <div class="box">
-<div align="left">
-<h2>{{hleft}}</h2>
-<div style="white-space: pre-wrap">
-{{tleft}}
-</div>
-</div>
+    <div class="thought-text">
+        {{thought}}
     </div>
-    <div class="box">
-<div align="left">
-<h2>{{hright}}</h2>
-<div style="white-space: pre-wrap">
-{{tright}}
-</div>
-</div>
-    </div>
-  </div>
+</section>
 
-
+<section class="content-grid">
+    <article class="content-card">
+        <h2>{{hleft}}</h2>
+        <p>{{tleft}}</p>
+    </article>
+    
+    <article class="content-card">
+        <h2>{{hright}}</h2>
+        <p>{{tright}}</p>
+    </article>
+</section>
 
 {{> foot}}
