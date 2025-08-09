@@ -4,10 +4,44 @@
     <div class="thought-label">
         <a href="thoughts.html">Thought for the day</a>
     </div>
-    <div class="thought-text">
-        {{thought}}
+    <div class="thought-text" id="daily-thought">
+        Loading thought...
     </div>
 </section>
+
+<script>
+(function() {
+    function seedRandom(seed) {
+        let x = Math.sin(seed) * 10000;
+        return x - Math.floor(x);
+    }
+    
+    function getTodaysSeed() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1;
+        const day = today.getDate();
+        return year * 10000 + month * 100 + day;
+    }
+    
+    function selectDailyThought(thoughts) {
+        const seed = getTodaysSeed();
+        const randomValue = seedRandom(seed);
+        const thoughtIndex = Math.floor(randomValue * thoughts.length);
+        return thoughts[thoughtIndex];
+    }
+    
+    fetch('data/thoughts.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('daily-thought').innerHTML = selectDailyThought(data.thoughts);
+        })
+        .catch(error => {
+            console.error('Error loading thoughts:', error);
+            document.getElementById('daily-thought').innerHTML = 'Error loading thought of the day.';
+        });
+})();
+</script>
 
 <section class="content-grid">
     <article class="content-card">
