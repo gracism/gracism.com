@@ -1,4 +1,5 @@
-This is the source for Gracism.com, which is currently (2024-05-16) moving to github
+This is the source for Gracism.com, which is currently (2024-05-16) moving to github. Github 
+Code is fully functional, but we are still serving from s3.
 
 The website is built with a few moustache templates.  the source files are in templates/
 
